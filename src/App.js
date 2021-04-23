@@ -32,6 +32,13 @@ function App() {
         <button onClick={function3}>Close 3</button>
         <br />
         <button onClick={function4}>Close 4</button>
+        <br />
+        <a
+          style={{ color: "white" }}
+          href="https://netatla.github.io/button-test/"
+        >
+          https://netatla.github.io/button-test/
+        </a>
       </header>
     </div>
   );
