@@ -1,22 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable no-restricted-globals */
+import "./App.css";
+
+const function1 = () => window.close();
+
+const function2 = () => {
+  this.focus();
+  self.opener = this;
+  self.close();
+};
+
+const function3 = () => {
+  window.focus();
+  window.opener = this;
+  window.close();
+};
+
+const function4 = () => {
+  window.opener = null;
+  window.open("", "_self");
+  window.close();
+};
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={function1}>Close 1</button>
+        <br />
+        <button onClick={function2}>Close 2</button>
+        <br />
+        <button onClick={function3}>Close 3</button>
+        <br />
+        <button onClick={function4}>Close 4</button>
       </header>
     </div>
   );
