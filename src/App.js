@@ -25,6 +25,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <input type="text" autoFocus />
+        <br />
         <button onClick={function1}>Close 1</button>
         <br />
         <button onClick={function2}>Close 2</button>
